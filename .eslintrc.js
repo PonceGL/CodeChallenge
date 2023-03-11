@@ -36,9 +36,12 @@ module.exports = {
   rules: {
     "quotes": ["warn", "double"],
     "no-loops/no-loops": ["error"],
-    "no-undef": ["warn", { typeof: false }],
+    "no-undef": ["off", { typeof: false }],
     "no-prototype-builtins": "warn",
-    "no-unused-vars": [
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
       "warn",
       {
         vars: "all",
