@@ -1,18 +1,28 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
+
+// interfaces
+import { DetailsScreenNavigationProp } from "../../interfaces/Navigation";
 
 //Components
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import Data from "./Data";
-import Picture from "./Picture";
 import Points from "./Points";
+import Picture from "../Picture";
 
 const Product = () => {
+  const navigation = useNavigation<DetailsScreenNavigationProp>();
   return (
-    <View style={styles.container}>
-      <Picture />
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate("Details");
+      }}
+      style={styles.container}
+    >
+      <Picture width={55} url="https://reactnative.dev/img/tiny_logo.png" />
       <Data />
       <Points />
-    </View>
+    </TouchableOpacity>
   );
 };
 

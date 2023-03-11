@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 import { Alert, StyleSheet, View } from "react-native";
-import MainButton from "../MainButton";
+import FooterButtonsContainer from "../FooterButtonsContainer";
 import SectionTitle from "../SectionTitle";
 import ListMoves from "./ListMoves";
 
@@ -11,9 +11,10 @@ const Moves = () => {
     <View style={styles.container}>
       <SectionTitle text="TUS MOVIMIENTOS" />
       <ListMoves />
-      <View style={styles.buttonsContainer}>
-        <MainButton onPress={() => Alert.alert("Hello")} text={"Todos"} />
-      </View>
+      <FooterButtonsContainer
+        onPress={() => Alert.alert("Hello")}
+        text="Todos"
+      />
     </View>
   );
 };
@@ -26,12 +27,5 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     rowGap: 10,
-  },
-  buttonsContainer: {
-    width: "100%",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    columnGap: 10,
   },
 });

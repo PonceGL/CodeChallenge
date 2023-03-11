@@ -1,39 +1,41 @@
 import React, { FC, PropsWithChildren } from "react";
-import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
+import {
+  Platform,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  View,
+} from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 import { colors } from "../../utils/colors";
 
 type Props = PropsWithChildren<{
   nameScreen: string;
+  statusBarColor?: string;
   bgColor?: string;
 }>;
 
 const Content: FC<Props> = ({
   children,
   nameScreen,
+  statusBarColor = colors.main,
   bgColor = colors.main,
 }) => {
   return (
     <>
       <StatusBar
-        animated={true}
-        backgroundColor={bgColor}
+        backgroundColor={
+          Platform.OS === "android" ? statusBarColor : "transparent"
+        }
         barStyle="dark-content"
       />
-      <SafeAreaView
-        style={[
-          styles.main,
-          {
-            backgroundColor: bgColor,
-          },
-        ]}
-      >
-        <View
-          accessibilityLabel={nameScreen}
-          style={[styles.main, styles.content]}
-        >
-          {children}
-        </View>
-      </SafeAreaView>
+      <LinearGradient colors={[statusBarColor, bgColor]} style={styles.main}>
+        <SafeAreaView style={styles.main}>
+          <View accessibilityLabel={nameScreen} style={styles.main}>
+            {children}
+          </View>
+        </SafeAreaView>
+      </LinearGradient>
     </>
   );
 };
@@ -43,8 +45,5 @@ export default Content;
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-  },
-  content: {
-    padding: 20,
   },
 });
