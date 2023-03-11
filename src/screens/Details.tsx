@@ -28,7 +28,5 @@ export default Details;
 const styles = StyleSheet.create({
   content: {
     flex: 1,
-    borderWidth: 2,
-    borderColor: "#3E54AC",
   },
 });

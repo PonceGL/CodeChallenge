@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
   header: {
     justifyContent: "flex-start",
     alignItems: "flex-start",
-    backgroundColor: "#ffffff",
   },
   title: {
     fontSize: 20,
