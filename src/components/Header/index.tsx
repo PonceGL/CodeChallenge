@@ -15,8 +15,9 @@ export default Header;
 
 const styles = StyleSheet.create({
   header: {
-    borderWidth: 2,
-    borderColor: "#3E54AC",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+    backgroundColor: "#ffffff",
   },
   title: {
     fontSize: 20,

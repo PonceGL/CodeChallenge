@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren } from "react";
 import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
-import { colors } from "../utils/colors";
+import { colors } from "../../utils/colors";
 
 type Props = PropsWithChildren<{
   nameScreen: string;
@@ -13,17 +13,28 @@ const Content: FC<Props> = ({
   bgColor = colors.main,
 }) => {
   return (
-    <View
-      accessibilityLabel={nameScreen}
-      style={[styles.main, { backgroundColor: bgColor }]}
-    >
+    <>
       <StatusBar
         animated={true}
-        backgroundColor="transparent"
+        backgroundColor={bgColor}
         barStyle="dark-content"
       />
-      <SafeAreaView style={styles.main}>{children}</SafeAreaView>
-    </View>
+      <SafeAreaView
+        style={[
+          styles.main,
+          {
+            backgroundColor: bgColor,
+          },
+        ]}
+      >
+        <View
+          accessibilityLabel={nameScreen}
+          style={[styles.main, styles.content]}
+        >
+          {children}
+        </View>
+      </SafeAreaView>
+    </>
   );
 };
 
@@ -32,6 +43,8 @@ export default Content;
 const styles = StyleSheet.create({
   main: {
     flex: 1,
+  },
+  content: {
     padding: 20,
   },
 });

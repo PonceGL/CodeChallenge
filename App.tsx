@@ -1,9 +1,8 @@
 import React from "react";
-
-import Home from "./src/screens/Home";
+import Navigation from "./src/Navigation";
 
 function App(): JSX.Element {
-  return <Home />;
+  return <Navigation />;
 }
 
 export default App;

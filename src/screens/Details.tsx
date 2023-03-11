@@ -1,27 +1,21 @@
 import React, { FC } from "react";
-// import { useNavigation } from "@react-navigation/native";
-
-//Components
 import { Button, StyleSheet, Text, View } from "react-native";
 import Content from "../components/Content";
-import Header from "../components/Header";
 import { DetailsScreenNavigationProp } from "../interfaces/Navigation";
 
 interface Props {
   navigation: DetailsScreenNavigationProp;
 }
 
-const Home: FC<Props> = ({ navigation }) => {
-  // const navigation = useNavigation<DetailsScreenNavigationProp>();
+const Details: FC<Props> = ({ navigation }) => {
   return (
     <Content nameScreen="Pantalla de inicio">
       <View style={styles.content}>
-        <Header />
-        <Text>Home</Text>
+        <Text>Details</Text>
         <Button
-          title="Go to Details"
+          title="Go to Home... again"
           onPress={() => {
-            navigation.navigate("Details");
+            navigation.navigate("Home");
           }}
         />
       </View>
@@ -29,7 +23,7 @@ const Home: FC<Props> = ({ navigation }) => {
   );
 };
 
-export default Home;
+export default Details;
 
 const styles = StyleSheet.create({
   content: {
