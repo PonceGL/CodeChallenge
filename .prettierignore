@@ -1,0 +1,11 @@
+node_modules/
+.github
+json
+ios/
+android/
+.bundle/
+src/assets
+
+.env**
+package.json
+*.md

@@ -1,0 +1,11 @@
+node_modules/
+json
+ios/
+android/
+.bundle/
+.eslintrc.js
+src/assets
+
+.env**
+package.json
+*.md
