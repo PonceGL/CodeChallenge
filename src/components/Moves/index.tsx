@@ -1,19 +1,40 @@
-import React from "react";
+import React, { FC } from "react";
+
+import { Product } from "../../interfaces/Products";
+
+//Hooks
+import { useProductFilter } from "../../Hooks/useFilterRedemptions";
 
 //Components
-import { Alert, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import FooterButtonsContainer from "../FooterButtonsContainer";
 import SectionTitle from "../SectionTitle";
 import ListMoves from "./ListMoves";
 
-const Moves = () => {
+interface Props {
+  data: Product[];
+  isLoading: boolean;
+}
+
+const Moves: FC<Props> = ({ data, isLoading }) => {
+  const { showAll, setShowAll, filteredProducts, setFilterByEarned } =
+    useProductFilter(data);
+
   return (
     <View style={styles.container}>
       <SectionTitle text="TUS MOVIMIENTOS" />
-      <ListMoves />
+      <ListMoves data={filteredProducts} isLoading={isLoading} />
       <FooterButtonsContainer
-        onPress={() => Alert.alert("Hello")}
-        text="Todos"
+        oneButton={showAll}
+        showAll={() => setShowAll(true)}
+        seeEarned={() => {
+          setShowAll(false);
+          setFilterByEarned(false);
+        }}
+        seeRedeemed={() => {
+          setShowAll(false);
+          setFilterByEarned(true);
+        }}
       />
     </View>
   );

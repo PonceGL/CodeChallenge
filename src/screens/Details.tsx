@@ -8,9 +8,9 @@ import { DetailsScreenNavigationProp } from "../interfaces/Navigation";
 import { BackHandler, StyleSheet, View } from "react-native";
 import Content from "../components/Content";
 import DetailsImage from "../components/DetailsImage";
-import FooterButtonsContainer from "../components/FooterButtonsContainer";
 import DetailsData from "../components/DetailsData";
 import ProductName from "../components/DetailsData/ProductName";
+import MainButton from "../components/MainButton";
 
 interface Props {
   navigation: DetailsScreenNavigationProp;
@@ -41,7 +41,7 @@ const Details: FC<Props> = ({ navigation }) => {
       <View style={styles.content}>
         <DetailsImage url="https://reactnative.dev/img/tiny_logo.png" />
         <DetailsData />
-        <FooterButtonsContainer onPress={backAction} text="Aceptar" />
+        <MainButton onPress={backAction} text="Aceptar" />
       </View>
     </Content>
   );

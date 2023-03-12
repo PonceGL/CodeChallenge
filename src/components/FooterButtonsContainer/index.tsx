@@ -5,14 +5,28 @@ import { StyleSheet, View } from "react-native";
 import MainButton from "../MainButton";
 
 interface Props {
-  text: string;
-  onPress: () => void;
+  oneButton?: boolean;
+  showAll: () => void;
+  seeEarned: () => void;
+  seeRedeemed: () => void;
 }
 
-const FooterButtonsContainer: FC<Props> = ({ text, onPress }) => {
+const FooterButtonsContainer: FC<Props> = ({
+  oneButton,
+  showAll,
+  seeEarned,
+  seeRedeemed,
+}) => {
   return (
     <View style={styles.buttonsContainer}>
-      <MainButton onPress={onPress} text={text} />
+      {oneButton ? (
+        <>
+          <MainButton onPress={seeEarned} text="Ganados" />
+          <MainButton onPress={seeRedeemed} text="Canjeados" />
+        </>
+      ) : (
+        <MainButton onPress={showAll} text="Todos" />
+      )}
     </View>
   );
 };

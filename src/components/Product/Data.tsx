@@ -1,14 +1,27 @@
 import React, { FC } from "react";
 import { colors } from "../../utils/colors";
+import { Product } from "../../interfaces/Products";
+
+// Hooks
+import { useFormattedDate } from "../../Hooks/useFormattedDate";
 
 //Components
 import { StyleSheet, Text, View } from "react-native";
 
-const Data: FC = () => {
+interface Props extends Pick<Product, "product" | "createdAt"> {}
+
+const Data: FC<Props> = ({ product, createdAt }) => {
+  const formattedDate = useFormattedDate(createdAt);
   return (
     <View style={styles.container}>
-      <Text style={[styles.name, styles.textColor]}>Nombre del producto</Text>
-      <Text style={[styles.date, styles.textColor]}>26 de enero, 2019</Text>
+      <Text
+        style={[styles.name, styles.textColor]}
+        numberOfLines={1}
+        ellipsizeMode="tail"
+      >
+        {product}
+      </Text>
+      <Text style={[styles.date, styles.textColor]}>{formattedDate}</Text>
     </View>
   );
 };

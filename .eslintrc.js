@@ -40,6 +40,8 @@ module.exports = {
     "no-prototype-builtins": "warn",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-empty-interface": "off",
     "unused-imports/no-unused-imports": "warn",
     "unused-imports/no-unused-vars": [
       "warn",
@@ -51,7 +53,7 @@ module.exports = {
       },
     ],
     "no-alert": "off",
-    "no-catch-shadow": "warn",
+    "no-catch-shadow": "off",
     "react/jsx-uses-vars": "error",
     "react/prop-types": "off",
     "no-useless-escape": "off",

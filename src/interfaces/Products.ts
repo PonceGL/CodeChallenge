@@ -1,4 +1,4 @@
-export interface Products {
+export interface Product {
   createdAt: string;
   product: string;
   points: number;

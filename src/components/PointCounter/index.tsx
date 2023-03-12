@@ -5,11 +5,15 @@ import { StyleSheet, View } from "react-native";
 import SectionTitle from "../SectionTitle";
 import Counter from "./Counter";
 
-const PointCounter: FC = () => {
+interface Props {
+  totalPoints: number;
+}
+
+const PointCounter: FC<Props> = ({ totalPoints }) => {
   return (
     <View style={styles.container}>
       <SectionTitle text="TUS PUNTOS" />
-      <Counter />
+      <Counter totalPoints={totalPoints} />
     </View>
   );
 };

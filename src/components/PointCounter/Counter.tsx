@@ -1,17 +1,22 @@
 import React, { FC } from "react";
 import { colors } from "../../utils/colors";
+import { formatNumber } from "../../utils/tools";
 
 //Components
 import { StyleSheet, Text, View } from "react-native";
 import Month from "./Month";
 
-const Counter: FC = () => {
+interface Props {
+  totalPoints: number;
+}
+
+const Counter: FC<Props> = ({ totalPoints }) => {
   return (
     <View style={styles.container}>
       <View style={[styles.main, styles.center]}>
         <Month />
         <Text style={styles.counterText} numberOfLines={1} ellipsizeMode="tail">
-          10,00.00 pts
+          {formatNumber(totalPoints)} pts
         </Text>
       </View>
     </View>
@@ -23,7 +28,7 @@ export default Counter;
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
   },
   center: {
     justifyContent: "center",
@@ -45,7 +50,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   counterText: {
-    fontSize: 32,
+    fontSize: 30,
     fontWeight: "800",
     lineHeight: 44,
     textAlign: "center",

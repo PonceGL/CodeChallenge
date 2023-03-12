@@ -1,17 +1,27 @@
 import React, { FC } from "react";
 import { colors } from "../../utils/colors";
+import { Product } from "../../interfaces/Products";
 
 //Components
 import { StyleSheet, Text, View } from "react-native";
 
-const Points: FC = () => {
+interface Props extends Pick<Product, "points" | "is_redemption"> {}
+
+const Points: FC<Props> = ({ points, is_redemption }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textColor}>
-        <Text>+</Text>
-        100
+        <Text
+          style={{
+            fontSize: is_redemption ? 17 : 15,
+            color: is_redemption ? colors.error : colors.succes,
+          }}
+        >
+          {is_redemption ? "-" : "+"}
+        </Text>
+        {points}
       </Text>
-      <Text style={styles.textColor}>{`>`}</Text>
+      <Text style={styles.textColor}>{">"}</Text>
     </View>
   );
 };
@@ -23,9 +33,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    columnGap: 15,
+    columnGap: 10,
   },
   textColor: {
+    fontSize: 13,
+    fontWeight: "800",
+    lineHeight: 22,
     color: colors.dark,
   },
 });
