@@ -33,14 +33,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: colors.light,
     borderRadius: 10,
-    shadowColor: "#000",
+    shadowColor: colors.dark,
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 5,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    elevation: 10,
   },
 });

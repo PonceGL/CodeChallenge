@@ -13,17 +13,16 @@ import ListMoves from "./ListMoves";
 
 interface Props {
   data: Product[];
-  isLoading: boolean;
 }
 
-const Moves: FC<Props> = ({ data, isLoading }) => {
+const Moves: FC<Props> = ({ data }) => {
   const { showAll, setShowAll, filteredProducts, setFilterByEarned } =
     useProductFilter(data);
 
   return (
     <View style={styles.container}>
       <SectionTitle text="TUS MOVIMIENTOS" />
-      <ListMoves data={filteredProducts} isLoading={isLoading} />
+      <ListMoves data={filteredProducts} />
       <FooterButtonsContainer
         oneButton={showAll}
         showAll={() => setShowAll(true)}

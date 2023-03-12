@@ -13,24 +13,15 @@ import Moves from "../components/Moves";
 
 const Home: FC = () => {
   useBackActionHome();
-  const { data, isLoading, totalPoints, error } = useGetInitData();
+  const { data, totalPoints } = useGetInitData();
   const { height } = useWindowDimensions();
-
-  // console.log("Home =======================");
-  // console.log("isLoading");
-  // console.log(isLoading);
-  // console.log("data");
-  // console.log(data);
-  // console.log("error");
-  // console.log(error);
-  // console.log("====================================");
 
   return (
     <Content nameScreen="Pantalla de inicio">
       <View style={[styles.content, { height: height }]}>
         <Header />
         <PointCounter totalPoints={totalPoints} />
-        <Moves data={data} isLoading={isLoading} />
+        <Moves data={data} />
       </View>
     </Content>
   );

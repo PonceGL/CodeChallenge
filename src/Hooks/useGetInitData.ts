@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "../API/constants";
+import { API_URL } from "@env";
 import { Product } from "../interfaces/Products";
 
 import { sumRedemptionPoints } from "../utils/sumRedemptionPoints";

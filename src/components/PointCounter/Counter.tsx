@@ -39,15 +39,14 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     rowGap: 10,
     backgroundColor: colors.secondary,
-    shadowColor: "#000",
+    shadowColor: colors.dark,
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 5,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    elevation: 10,
   },
   counterText: {
     fontSize: 30,

@@ -5,13 +5,13 @@ import { Product } from "../../interfaces/Products";
 //Components
 import { FlatList, StyleSheet } from "react-native";
 import ProductComponent from "../Product";
+import EmptyComponent from "../EmptyComponent";
 
 interface Props {
   data: Product[] | null;
-  isLoading: boolean;
 }
 
-const ListMoves: FC<Props> = ({ data, isLoading }) => {
+const ListMoves: FC<Props> = ({ data }) => {
   return (
     <FlatList
       data={data}
@@ -21,7 +21,7 @@ const ListMoves: FC<Props> = ({ data, isLoading }) => {
       showsVerticalScrollIndicator={false}
       style={styles.container}
       contentContainerStyle={styles.stylesForItems}
-      // ListEmptyComponent={}
+      ListEmptyComponent={<EmptyComponent />}
     />
   );
 };
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     width: "100%",
     flex: 1,
     padding: 10,
+    marginBottom: 10,
     backgroundColor: colors.light,
     borderRadius: 10,
   },
