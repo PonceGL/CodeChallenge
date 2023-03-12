@@ -24,7 +24,7 @@ const EmptyComponent: FC = () => {
   ).start();
 
   return (
-    <View style={styles.container}>
+    <View testID="empty-component" style={styles.container}>
       <Animated.View
         style={[
           styles.box,
@@ -47,8 +47,6 @@ export default EmptyComponent;
 
 const styles = StyleSheet.create({
   container: {
-    // width: "100%",
-    // height: 100,
     width: "100%",
     flex: 1,
     overflow: "hidden",

@@ -11,7 +11,7 @@ interface Props {
 
 const PointCounter: FC<Props> = ({ totalPoints }) => {
   return (
-    <View style={styles.container}>
+    <View testID="PointCounter" style={styles.container}>
       <SectionTitle text="TUS PUNTOS" />
       <Counter totalPoints={totalPoints} />
     </View>

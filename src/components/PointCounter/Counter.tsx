@@ -13,7 +13,7 @@ interface Props {
 const Counter: FC<Props> = ({ totalPoints }) => {
   return (
     <View style={styles.container}>
-      <View style={[styles.main, styles.center]}>
+      <View testID="counter-text" style={[styles.main, styles.center]}>
         <Month />
         <Text style={styles.counterText} numberOfLines={1} ellipsizeMode="tail">
           {formatNumber(totalPoints)} pts

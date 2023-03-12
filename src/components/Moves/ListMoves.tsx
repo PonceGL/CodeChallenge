@@ -14,6 +14,7 @@ interface Props {
 const ListMoves: FC<Props> = ({ data }) => {
   return (
     <FlatList
+      testID="flatList-moves"
       data={data}
       renderItem={({ item }) => <ProductComponent {...item} />}
       keyExtractor={item => item.id}

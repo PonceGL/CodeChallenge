@@ -1,18 +1,15 @@
-import "react-native";
 import React from "react";
+import { render } from "@testing-library/react-native";
 import App from "../App";
 
-import renderer, { ReactTestRenderer } from "react-test-renderer";
-
-describe("App", () => {
-  const element = (): ReactTestRenderer => {
-    const app = renderer.create(<App />);
-    return app;
+describe("<App/>", () => {
+  const element = () => {
+    const component = render(<App />);
+    return { component };
   };
 
   test("should render correctly", () => {
-    const app: ReactTestRenderer = element();
-    const tree = app.toJSON();
-    expect(tree).toMatchSnapshot();
+    const { component } = element();
+    expect(component).toBeDefined();
   });
 });

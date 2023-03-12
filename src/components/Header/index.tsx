@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { FC } from "react";
 import { colors } from "../../utils/colors";
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>Bienvenido de vuelta!</Text>

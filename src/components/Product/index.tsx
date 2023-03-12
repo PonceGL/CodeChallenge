@@ -19,6 +19,7 @@ const ProductComponent: FC<Props> = props => {
 
   return (
     <TouchableOpacity
+      testID="product-touchable"
       onPress={() => {
         navigation.navigate("Details", { productData: props });
       }}

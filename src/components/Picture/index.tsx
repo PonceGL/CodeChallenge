@@ -28,6 +28,7 @@ const Picture: FC<Props> = ({ width = 55, url }) => {
       ]}
     >
       <Image
+        testID="picture"
         style={[
           styles.image,
           {

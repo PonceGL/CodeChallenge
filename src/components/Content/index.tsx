@@ -30,10 +30,8 @@ const Content: FC<Props> = ({
         barStyle="dark-content"
       />
       <LinearGradient colors={[statusBarColor, bgColor]} style={styles.main}>
-        <SafeAreaView style={styles.main}>
-          <View accessibilityLabel={nameScreen} style={styles.main}>
-            {children}
-          </View>
+        <SafeAreaView accessibilityLabel={nameScreen} style={styles.main}>
+          <View style={styles.main}>{children}</View>
         </SafeAreaView>
       </LinearGradient>
     </>
