@@ -16,10 +16,11 @@ interface Props extends Product {}
 const ProductComponent: FC<Props> = props => {
   const { createdAt, product, points, image, is_redemption } = props;
   const navigation = useNavigation<DetailsScreenNavigationProp>();
+
   return (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate("Details", props);
+        navigation.navigate("Details", { productData: props });
       }}
       style={styles.container}
     >

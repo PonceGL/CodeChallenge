@@ -19,12 +19,14 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
   },
   title: {
+    fontFamily: "Avenir LT Std",
     fontSize: 20,
     lineHeight: 27,
     color: colors.dark,
     fontWeight: "800",
   },
   userName: {
+    fontFamily: "Avenir LT Std",
     fontSize: 16,
     lineHeight: 21,
     color: colors.dark,

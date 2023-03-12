@@ -57,7 +57,7 @@ module.exports = {
     "react/jsx-uses-vars": "error",
     "react/prop-types": "off",
     "no-useless-escape": "off",
-    "react-native/no-inline-styles": "warn",
+    "react-native/no-inline-styles": "off",
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "no-var": "error",

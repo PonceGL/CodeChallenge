@@ -36,11 +36,13 @@ const styles = StyleSheet.create({
     rowGap: 7,
   },
   name: {
+    fontFamily: "Avenir LT Std",
     fontSize: 14,
     fontWeight: "800",
     lineHeight: 19,
   },
   date: {
+    fontFamily: "Avenir LT Std",
     fontSize: 12,
     fontWeight: "400",
     lineHeight: 16,

@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   counterText: {
+    fontFamily: "Avenir LT Std",
     fontSize: 30,
     fontWeight: "800",
     lineHeight: 44,

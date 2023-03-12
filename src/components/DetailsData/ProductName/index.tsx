@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textName: {
+    fontFamily: "Avenir LT Std",
     fontSize: 24,
     lineHeight: 33,
     color: colors.dark,

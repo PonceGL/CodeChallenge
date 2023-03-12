@@ -13,6 +13,7 @@ const Points: FC<Props> = ({ points, is_redemption }) => {
       <Text style={styles.textColor}>
         <Text
           style={{
+            fontFamily: "Avenir LT Std",
             fontSize: is_redemption ? 17 : 15,
             color: is_redemption ? colors.error : colors.succes,
           }}
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
     columnGap: 10,
   },
   textColor: {
+    fontFamily: "Avenir LT Std",
     fontSize: 13,
     fontWeight: "800",
     lineHeight: 22,

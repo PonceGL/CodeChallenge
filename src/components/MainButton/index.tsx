@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   text: {
+    fontFamily: "Avenir LT Std",
     fontSize: 16,
     fontWeight: "800",
     lineHeight: 22,

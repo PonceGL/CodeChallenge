@@ -3,13 +3,13 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 //Interfaces
-import { RootStackParamList } from "../interfaces/Navigation";
+import { StackParamList } from "../interfaces/Navigation";
 
 // Screens
 import Home from "../screens/Home";
 import Details from "../screens/Details";
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<StackParamList>();
 
 export default function Navigation() {
   return (

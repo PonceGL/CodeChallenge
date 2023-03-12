@@ -18,7 +18,16 @@ const Home: FC = () => {
 
   return (
     <Content nameScreen="Pantalla de inicio">
-      <View style={[styles.content, { height: height }]}>
+      <View
+        style={[
+          styles.content,
+          {
+            height: height,
+            rowGap: height < 670 ? 10 : 20,
+            paddingBottom: height < 670 ? 10 : 0,
+          },
+        ]}
+      >
         <Header />
         <PointCounter totalPoints={totalPoints} />
         <Moves data={data} />
@@ -33,8 +42,6 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     padding: 20,
-    paddingBottom: 0,
     justifyContent: "space-between",
-    rowGap: 20,
   },
 });

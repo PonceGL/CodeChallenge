@@ -2,7 +2,7 @@ import React from "react";
 import { colors } from "../../utils/colors";
 
 //Components
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import SectionTitle from "../SectionTitle";
 
 const Month = () => {
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     left: 20,
   },
   text: {
+    fontFamily: "Avenir LT Std",
     fontSize: 16,
     fontWeight: "800",
     lineHeight: 22,

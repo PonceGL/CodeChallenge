@@ -14,6 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-CodeChallenge-CodeChallengeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CodeChallenge-CodeChallengeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		837F933229BE45FA0015563B /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 837F932F29BE45F90015563B /* AvenirLTStd-Roman.otf */; };
+		837F933329BE45FA0015563B /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 837F933029BE45F90015563B /* AvenirLTStd-Black.otf */; };
+		837F933429BE45FA0015563B /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 837F933129BE45FA0015563B /* AvenirLTStd-Book.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		5B7EB9410499542E8C5724F5 /* Pods-CodeChallenge-CodeChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge-CodeChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CodeChallenge-CodeChallengeTests/Pods-CodeChallenge-CodeChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-CodeChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CodeChallenge/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		837F932F29BE45F90015563B /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
+		837F933029BE45F90015563B /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
+		837F933129BE45FA0015563B /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-CodeChallenge-CodeChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge-CodeChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-CodeChallenge-CodeChallengeTests/Pods-CodeChallenge-CodeChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -86,6 +92,7 @@
 		13B07FAE1A68108700A75B9A /* CodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				837F932D29BE457F0015563B /* Resources */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -111,6 +118,24 @@
 			children = (
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		837F932D29BE457F0015563B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				837F932E29BE45AF0015563B /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		837F932E29BE45AF0015563B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				837F933029BE45F90015563B /* AvenirLTStd-Black.otf */,
+				837F933129BE45FA0015563B /* AvenirLTStd-Book.otf */,
+				837F932F29BE45F90015563B /* AvenirLTStd-Roman.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		83CBB9F61A601CBA00E9B192 = {
@@ -243,7 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				837F933429BE45FA0015563B /* AvenirLTStd-Book.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				837F933329BE45FA0015563B /* AvenirLTStd-Black.otf in Resources */,
+				837F933229BE45FA0015563B /* AvenirLTStd-Roman.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +514,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BR957994MU;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CodeChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -513,6 +542,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BR957994MU;
 				INFOPLIST_FILE = CodeChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

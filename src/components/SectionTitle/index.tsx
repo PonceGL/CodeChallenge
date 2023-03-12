@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   text: {
+    fontFamily: "Avenir LT Std",
     fontSize: 14,
     fontWeight: "800",
     lineHeight: 19,
