@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Product } from "../../interfaces/Products";
 
@@ -32,7 +32,7 @@ const ProductComponent: FC<Props> = props => {
   );
 };
 
-export default ProductComponent;
+export default memo(ProductComponent);
 
 const styles = StyleSheet.create({
   container: {

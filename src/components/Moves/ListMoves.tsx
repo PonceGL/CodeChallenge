@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import { colors } from "../../utils/colors";
 import { Product } from "../../interfaces/Products";
 
@@ -27,7 +27,7 @@ const ListMoves: FC<Props> = ({ data }) => {
   );
 };
 
-export default ListMoves;
+export default memo(ListMoves);
 
 const styles = StyleSheet.create({
   container: {
